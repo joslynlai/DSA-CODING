@@ -9,3 +9,8 @@ class Solution:
                 return True
 
         return False
+
+
+# note:
+# set function: add
+# return True/False in python
