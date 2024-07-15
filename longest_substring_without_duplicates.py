@@ -5,9 +5,9 @@ class Solution:
         substring = ""
         maxLength = 0
         for i in range(start_index, len(s)):
-            if ascii(s[i]) in substring:
+            if s[i] in substring:
                 # find the index
-                index = substring.index(ascii(s[i]))
+                index = substring.index(s[i])
                 start_index = i + 1
                 if maxLength < counter:
                     maxLength = counter
@@ -16,9 +16,9 @@ class Solution:
                     substring = substring[index + 1 :]
                 else:
                     substring = ""
-                substring += ascii(s[i])
+                substring += s[i]
             else:
-                substring += ascii(s[i])
+                substring += s[i]
                 counter += 1
         if maxLength < counter:
             maxLength = counter
